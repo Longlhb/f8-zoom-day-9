@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.wrapper {
+    background-color: bisque;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    position: relative;
+}
+
+.loading--dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+
+.loading--dot + .loading--dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+    animation: loading 6s linear infinite;
+}
+
+.loading--dot:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.loading--dot:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.loading--dot:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.loading--dot:nth-child(5) {
+    animation-delay: 1.2s;
+}
+
+.loading--dot:nth-child(6) {
+    animation-delay: 1.5s;
+}
+
+.loading--dot:nth-child(7) {
+    animation-delay: 1.8s;
+}
+
+.loading--dot + .loading--dot > .dot {
+    animation-delay: 3s;
+}
+
+.loading--dot + .loading--dot > .dot:nth-child(2) {
+    animation-delay: 3.3s;
+}
+
+.loading--dot + .loading--dot > .dot:nth-child(3) {
+    animation-delay: 3.6s;
+}
+.loading--dot + .loading--dot > .dot:nth-child(4) {
+    animation-delay: 3.9s;
+}
+.loading--dot + .loading--dot > .dot:nth-child(5) {
+    animation-delay: 4.2s;
+}
+.loading--dot + .loading--dot > .dot:nth-child(6) {
+    animation-delay: 4.5s;
+}
+.loading--dot + .loading--dot > .dot:nth-child(7) {
+    animation-delay: 4.8s;
+}
+
+@keyframes loading {
+    0%,
+    100% {
+        opacity: 0;
+        scale: 0;
+    }
+    10% {
+        opacity: 0;
+        scale: 0.6;
+    }
+    25% {
+        transform: translateY(-40px);
+        scale: 1;
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(0x);
+        scale: 1.6;
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(40px);
+        scale: 1;
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+        scale: 0.6;
+    }
+}
