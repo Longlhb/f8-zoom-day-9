@@ -34,7 +34,6 @@ body {
     position: relative;
 }
 
-
 .loading--dot + .loading--dot {
     position: absolute;
     top: 0;
